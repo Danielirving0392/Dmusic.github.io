@@ -3,7 +3,7 @@
 // Product catalog
 let Products = [
     { id: 1, Image: "../Assets/Products/Fender.webp",    name: "Fender Bass Guitar",  price: 850,  description: "A classic 4-string electric bass with a punchy, warm tone and simple single split-coil pickup design." },
-    { id: 2, Image: "../Assets/Products/sire.webp",      name: "Sire Bass Guitar",    price: 1400, description: "A high-end bass offering premium features like roasted maple necks and active/passive preamps at an affordable price." },
+    { id: 2, Image: "../Assets/Products/Sire.webp",      name: "Sire Bass Guitar",    price: 1400, description: "A high-end bass offering premium features like roasted maple necks and active/passive preamps at an affordable price." },
     { id: 3, Image: "../Assets/Products/drum.jpg",       name: "PDP Drum Set",        price: 2000, description: "A compact beginner/intermediate kit with multi-ply poplar shells delivering warm, full tone across music styles." },
     { id: 4, Image: "../Assets/Products/drum_tampa.png", name: "Tampa Drum Set",      price: 1750, description: "A ready-to-play complete kit with poplar shells, sturdy hardware, and a Meinl cymbal pack included." },
     { id: 5, Image: "../Assets/Products/MONTAGE.jpg",    name: "Montage Keyboards",   price: 3500, description: "A flagship synthesizer with a triple-engine design and up to 400 notes of polyphony." },
