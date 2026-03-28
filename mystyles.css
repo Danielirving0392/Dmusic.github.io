@@ -1,0 +1,665 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Leckerli+One&family=Poppins:wght@400;600&display=swap');
+
+/* Theme variables */
+:root {
+    --color-primary:     #D9D9D9;
+    --color-accent:      #69BDE4;
+    --color-accent-dark: dodgerblue;
+    --color-dark:        #1c2225;
+    --color-black:       #000000;
+    --color-white:       #ffffff;
+    --color-text-muted:  #4b5154;
+    --color-text-light:  #D9D9D9;
+    --color-border:      rgba(0, 0, 0, 0.532);
+    --color-shadow:      rgba(116, 116, 150, 0.4);
+    --color-shadow-blue: rgba(0, 0, 255, 0.4);
+    --border-radius-btn: 15px;
+    --transition-std:    background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+/* Base reset */
+body {
+    line-height: 2.5;
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family:"Poppins", sans-serif;
+    background-image: url(Assets/index_mg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Typography */
+span {
+    color: var(--color-text-muted);
+}
+
+.span_font {
+    font-size: 60px;
+    color: var(--color-white);
+}
+
+h1 {
+    justify-self: center;
+}
+
+h2 {
+    font-size: large;
+    text-align: center;
+    display: block;
+    margin: 0%;
+    padding: 0%;
+    border-bottom: 1px solid var(--color-black);
+}
+
+a:hover {
+    color: #393939;
+}
+
+/* Shared layout */
+.container {
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    height: 10%;
+    width: 90%;
+    gap: 30px;
+    padding: 20px;
+    margin: 50px auto;
+}
+
+/* Page banner */
+.BG1 {
+    background-color: var(--color-black);
+    padding: 0%;
+    margin: 0%;
+    height: 120px;
+    width: 100%;
+}
+
+.BG1 h1 {
+    color: var(--color-white);
+    font-size: 50px;
+    text-align: center;
+    animation-name: slideInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+}
+
+/* Navigation */
+.nav_contain {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: transparent;
+    box-shadow: 0 5px 15px rgb(0,0,0,0.006);
+}
+
+.nav {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: slideInTop;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+}
+
+.nav li {
+    display: block;
+    padding: 10px 30px;
+    position: relative;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: var(--color-white);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.nav li a:hover {
+    color: #2a2a2a98;
+}
+
+.logo {
+    width: 120px;
+    padding: 0px;
+    margin: 0px;
+    animation-name: slideInTop;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+.logo:hover {
+    transform: translateY(-2px);
+    opacity: 0.7;
+}
+
+/* Cart icon in the nav */
+.cart-icon {
+    display: block;
+    padding: 10px 30px;
+    position: relative;
+    color: var(--color-white);
+    font-size: 30px;
+}
+
+.cart-icon:hover {
+    color: #2a2a2a98;
+}
+
+/* Welcome section */
+.Welcome {
+    width: 100%;
+    height: 85vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0% 80px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    animation-name: slideInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+}
+
+.Welcome h1 {
+    font-size: 60px;
+    color: var(--color-text-light);
+}
+
+.Welcome p {
+    font-size: 30px;
+    color: var(--color-text-light);
+}
+
+.Welcome button {
+    border-radius: var(--border-radius-btn);
+    border: 1px solid var(--color-primary);
+    background-color: transparent;
+    margin-top: 10px;
+    padding: 15px;
+    transition: var(--transition-std);
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    color: var(--color-white);
+}
+
+.Welcome button:hover {
+    background-color: var(--color-primary);
+    color: var(--color-black);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--color-shadow-blue);
+}
+
+/* Product grid */
+.Product_Panel {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    flex-wrap: wrap;
+    animation-name: slideInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+}
+
+/* Individual product card */
+.Products {
+    text-align: center;
+    background-color: #00000000;
+    border: 1px solid var(--color-border);
+    width: 15%;
+    height: auto;
+    border-radius: 5px;
+    padding: 23px;
+    margin: 20px;
+    box-shadow: 0 4px 12px var(--color-shadow);
+}
+
+.Products img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.Products h3 {
+    align-content: center;
+    font-size: medium;
+}
+
+.Products:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.058);
+    cursor: pointer;
+}
+
+/* Add to Cart button */
+.Products button {
+    border-radius: var(--border-radius-btn);
+    background-color: #bbb6b6;
+    margin-top: 10px;
+    padding: 15px;
+    transition: var(--transition-std);
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+    box-shadow: 0 4px 12px var(--color-shadow);
+}
+
+.Products button:hover {
+    background-color: #999696;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--color-shadow-blue);
+}
+
+.description {
+    font-size: small;
+    color: #5a5a5a;
+}
+
+/* Cart and checkout content area */
+.Cart_Panel {
+    background-color: white;
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 50px;
+    box-sizing: border-box;
+    animation-name: slideInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+}
+
+.Cart_Panel table {
+    justify-self: center;
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+/* Table header row */
+.Cart_Panel table thead td {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    text-align: center;
+    padding: 12px 15px;
+    font-weight: 700;
+}
+
+.Cart_Panel table tbody td {
+    text-align: center;
+    padding: 12px 15px;
+    vertical-align: middle;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Alternating row colour */
+.Cart_Panel table tbody tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+/* Product thumbnail in the cart table */
+.Cart_img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Quantity stepper controls */
+.qty-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 4px 0;
+}
+
+.qty-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    background: var(--color-primary);
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1;
+    transition: var(--transition-std);
+    flex-shrink: 0;
+}
+
+.qty-btn:hover {
+    background: #b0abab;
+    border-color: #999;
+}
+
+.qty-value {
+    min-width: 24px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+/* Remove item button */
+.remove-btn {
+    background: none;
+    border: none;
+    color: #c0392b;
+    cursor: pointer;
+    font-size: 16px;
+    transition: color 0.2s ease;
+}
+
+.remove-btn:hover {
+    color: #922b21;
+}
+
+/* Empty cart message */
+.cart-empty {
+    text-align: center;
+    color: #aaa;
+    padding: 30px;
+    font-size: 16px;
+}
+
+/* Checkout layout */
+.checkout-shipping {
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0;
+    padding: 0;
+}
+
+.cart-empty-msg {
+    color: #aaa;
+}
+
+/* Order total row */
+.cart-total-row {
+    text-align: right;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* Live change-due text */
+.change-display {
+    font-weight: 600;
+    color: var(--color-text-muted);
+}
+
+/* Checkout action buttons row */
+.checkout-actions {
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+/* Login error message */
+#login-error {
+    color: #c0392b;
+    font-size: 13px;
+    margin: 4px 0 0 0;
+    min-height: 18px;
+}
+
+/* Form inputs */
+input {
+    width: 300px;
+    height: 30px;
+    border-radius: var(--border-radius-btn);
+    box-shadow: 12px;
+    padding: 7px;
+}
+
+input:hover {
+    background-color: rgb(208, 200, 200);
+}
+
+/* Form fieldset card */
+fieldset {
+    background-color: var(--color-primary);
+    border-radius: 10px;
+    padding: 50px;
+    justify-self: center;
+    animation-name: slideInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+}
+
+fieldset:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(86, 86, 255, 0.4);
+}
+
+/* Standard action button */
+.button1 {
+    border-radius: var(--border-radius-btn);
+    background-color: var(--color-accent);
+    margin-top: 10px;
+    padding: 15px;
+    transition: var(--transition-std);
+    cursor: pointer;
+    width: 300px;
+    height: 50px;
+}
+
+.button1:hover {
+    background-color: var(--color-accent-dark);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--color-shadow-blue);
+}
+
+.button1:active {
+    transform: translateY(1px);
+    box-shadow: none;
+}
+
+/* Dark checkout/confirm button */
+.Checkout_btn {
+    border-radius: var(--border-radius-btn);
+    background-color: var(--color-black);
+    color: var(--color-white);
+    margin-top: 10px;
+    padding: 15px;
+    transition: var(--transition-std);
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+    font-weight: 700;
+    box-shadow: 0 4px 12px var(--color-shadow);
+}
+
+.Checkout_btn:hover {
+    background-color: var(--color-primary);
+    color: var(--color-black);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(10, 10, 19, 0.4);
+}
+
+/* About Us section */
+.about-section {
+    justify-self: center;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: var(--color-dark);
+    text-align: center;
+    color: var(--color-white);
+}
+
+/* Animations */
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(150%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInTop {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Mobile styles (max-width: 768px) */
+@media (max-width: 768px) {
+
+    .nav_contain {
+        flex-direction: column;
+        padding: 15px 20px;
+        gap: 10px;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        width: 100%;
+    }
+
+    .nav li {
+        padding: 8px 10px;
+    }
+
+    .cart-icon {
+        padding: 8px 10px;
+    }
+
+    .Welcome {
+        padding: 0 20px;
+        height: auto;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .Welcome h1 {
+        font-size: 32px;
+    }
+
+    .Welcome p {
+        font-size: 18px;
+    }
+
+    .Welcome button {
+        width: 100%;
+    }
+
+    .span_font {
+        font-size: 32px;
+    }
+
+    .BG1 h1 {
+        font-size: 28px;
+    }
+
+    .container {
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+        margin: 20px auto;
+    }
+
+    .Product_Panel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Products {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .Cart_Panel {
+        padding: 20px;
+    }
+
+    .Cart_Panel table {
+        font-size: 13px;
+    }
+
+    .Cart_Panel table thead td,
+    .Cart_Panel table tbody td {
+        padding: 8px 6px;
+    }
+
+    input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    fieldset {
+        padding: 20px;
+        width: 90%;
+        box-sizing: border-box;
+    }
+
+    .button1 {
+        width: 100%;
+    }
+
+    .checkout-actions {
+        flex-wrap: wrap;
+    }
+
+    .checkout-actions .button1,
+    .checkout-actions .Checkout_btn {
+        width: 100%;
+    }
+}
+
+/* iframe */
+
+iframe{
+	padding: 15px;
+	display: block;
+	width:95%;
+	height: 600px;
+	margin: 0 auto;
+}
