@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | D Music</title>
+    <link rel="stylesheet" href="../mystyles.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+
+<body>
+
+<div class="nav_contain">
+    <img class="logo" src="../Assets/Logo.png" alt="D Music Logo">
+    <ul class="nav" id="top">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Shop.html">Shop</a></li>
+        <li><a href="Login.html">Login</a></li>
+        <li><a href="About_us.html">About Us</a></li>
+        <li>
+            <a href="Cart.html"><i class="ri-shopping-cart-2-line cart-icon"></i></a>
+        </li>
+    </ul>
+</div>
+
+<div class="BG1">
+    <h1>Check out</h1>
+</div>
+
+<main>
+    <div class="Cart_Panel">
+
+        <h2>Order Summary</h2>
+        <br>
+        <table>
+            <thead>
+                <tr>
+                    <td>Item</td>
+                    <td>Name</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Subtotal</td>
+                </tr>
+            </thead>
+            <tbody id="cart-summary">
+                <tr>
+                    <!-- Replaced by Checkout.js with the actual cart items -->
+                    <td colspan="5" class="cart-empty-msg">Your cart is empty.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br>
+        <!-- Order total displayed here -->
+        <p class="cart-total-row">
+            Total: <span id="cart-total">$0.00</span>
+        </p>
+
+        <br><hr><br>
+
+        <!-- Shipping details form -->
+        <h2>Shipping Details</h2>
+        <br>
+        <div class="container checkout-shipping">
+
+            <fieldset>
+                <label for="name">Full Name</label><br>
+                <input type="text" id="name" placeholder="John Doe"><br><br>
+
+                <label for="address">Address</label><br>
+                <input type="text" id="address" placeholder="123 Main Street, Kingston"><br><br>
+
+                <label for="amount">Amount Being Paid ($)</label><br>
+                <input type="number" id="amount" placeholder="0.00" min="0" step="0.01">
+                <br><br>
+                <!-- Change due updates here as the user types -->
+                <p id="change-display" class="change-display"></p>
+            </fieldset>
+
+        </div>
+
+        <br><hr><br>
+
+        <!-- Action buttons -->
+        <div class="container checkout-actions">
+            <button class="Checkout_btn" onclick="confirmOrder()">Confirm</button>
+            <button class="button1" onclick="cancelOrder()">Cancel</button>
+            <button class="button1" onclick="clearAll()">Clear All</button>
+            <button class="button1" onclick="closePage()">Close</button>
+        </div>
+
+    </div>
+</main>
+
+<footer>Daniel Irving © 2005990</footer>
+
+<script src="Checkout.js"></script>
+
+</body>
+</html>

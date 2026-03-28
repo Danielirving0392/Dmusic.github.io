@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | D Music</title>
+    <link rel="stylesheet" href="../mystyles.css">
+</head>
+
+<body>
+<div class="nav_contain">
+    <img class="logo" src="../Assets/Logo.png" alt="D Music Logo">
+
+    <ul class="nav" id="top">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Login.html">Login</a></li>
+        <li><a href="About_us.html">About Us</a></li>
+    </ul>
+</div>
+
+<main class="container">
+
+    <section>
+        <fieldset>
+            <form id="registrationform" name="Register">
+                <h1>Register</h1>
+
+                <!-- Name and date of birth fields -->
+                <div>
+                    <label for="name">Name</label><br>
+                    <input type="text" name="name" id="name" placeholder="Enter your full name" required>
+                    <p id="name-error"></p>
+                </div>
+
+                <div>
+                    <label for="DOB">Date of Birth</label><br>
+                    <input type="date" name="DOB" id="DOB" required>
+                    <p id="dob-error"></p>
+                </div>
+
+                <!-- Email and username fields -->
+                <div>
+                    <label for="Email">Email</label><br>
+                    <input type="email" name="Email" id="Email" placeholder="Enter your email" required>
+                    <p id="email-error"></p>
+                </div>
+
+                <div>
+                    <label for="Username">Username</label><br>
+                    <input type="text" name="Username" id="Username" placeholder="Enter a valid username" required>
+                    <p id="username-error"></p>
+                </div>
+
+                <!-- Password field -->
+                <div>
+                    <label for="password">Password</label><br>
+                    <input type="password" name="Password" id="password" placeholder="Create a strong password (min. 6 chars)" required>
+                    <p id="password-error"></p>
+                </div>
+
+                <p>Already have an account? <a href="Login.html">Login</a></p>
+
+                <button type="submit" class="button1" id="Signup_btn">Sign up</button>
+            </form>
+        </fieldset>
+    </section>
+
+</main>
+
+<footer>Daniel Irving © 2005990</footer>
+
+<script src="../Codes/Registration.js"></script>
+</body>
+</html>
